@@ -1,0 +1,21 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Cal's Execution", "DarkTheme")
+
+local MainTab = Window:NewTab("Scripts")
+local Section = MainTab:NewSection("Scripts")
+
+Section:NewButton("Infinite yield", " ", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Section:NewButton("Islands System", "", function()
+    loadstring(game:HttpGet("https://system-exodus.com/scripts/Islands/Islands.lua", true))()
+end)
+
+Section:NewButton("Mystery Hub (Universal)", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/i4mitty/MysteryHub/main/MysteryHub%20-%20Ragdoll%20Engine.lua"))()
+end)
+
+Section:NewSlider("Walkspeed", "", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
